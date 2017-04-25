@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:700|Montserrat:200" rel="stylesheet">
+  </head>
+  <body>
+   <header id="titles">
+        <nav>
+          <ul>
+            <li class="navlist" id="brand"><a href="http://localhost:3000/home"><h3>Gamer Space</h3></a></li>
+            <li class="navlist list"><a id="user" href="http://localhost:3000/account"><img id="profileImage" src="<%= user.photos[0].value %>"> <%= user.name['familyName'] %></a></li>
+            <li class="navlist list"><a href="http://localhost:3000/home">Home</a></li>
+           <li class="navlist list"><a href="http://localhost:3000/contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+    <section>
+      <h2>Chat Room Form:</h2>
+      <div id="chatformCon">
+      <form id="chatform" method="post" action="http://localhost:3000/chats/add" >
+        <div id="wrap">
+        <label>Game: </label><br>
+        <input type="text" class="input" id="game" name="game" placeholder="Enter Game"><br>
+        <label>Chat Name</label><br>
+        <input type="text" class="input" id="chatname" name="chatname" placeholder="Enter Chat Name"><br>
+        <label>Private: </label><br>
+        <input type="text" class="input" id="private" name="private" placeholder="Private?">
+        </div>
+        <input type="submit" value="Submit">
+      </form>
+      </div>
+    </section>
+    <footer>
+     <h3 id="footerTitle">@Gamer Space</h3>
+    </footer> 
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script> 
+    <script src="/javascripts/main.js"></script>  
+  </body>
+</html>

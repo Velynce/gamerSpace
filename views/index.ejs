@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:700|Montserrat:200" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>  
+  </head>
+  <body>
+      <header id="titles">
+        <nav>
+          <ul>
+            <li class="navlist" id="brand"><a href="http://localhost:3000/home"><h4>Gamer Space</h4></a></li>
+            <li class="navlist list"><a id="user" href="http://localhost:3000/account"><img id="profileImage" src="<%= user.photos[0].value %>"> <%= user.name['familyName'] %></a></li>
+            <li class="navlist list"><a href="http://localhost:3000/home">Home</a></li>
+           <li class="navlist list"><a href="http://localhost:3000/contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+    <section id="mainCon">
+      <div id="titleWrap">
+      <h2 id="mainTitle">Chat Rooms</h2>
+    </div>
+      <div id="rooms">
+        <ul id="cRoomWrap">
+          <% chats.forEach(function(chat) { %>
+            <li class="cRooms"><a class="room" href="http://localhost:3000/chat/<%=chat._id %>"><%= chat.name  %></a></li>
+           <% }) %>
+        </ul>
+      </div>
+      <div id="favourite"></div>
+    </section>
+    <div id="createchat">
+      <a href="http://localhost:3000/create">Create New Chat</a>
+    </div>
+    <footer>
+     <h3 id="footerTitle">@Gamer Space</h3>
+    </footer> 
+   <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="/javascripts/main.js"></script>  
+    <script src="/javascripts/socket.js"></script>
+  </body>
+</html>

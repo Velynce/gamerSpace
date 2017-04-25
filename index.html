@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gamer Space</title> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+   <header>
+      <nav>
+        <ul>
+          <li><a href="http://localhost:3000/home">Home</a></li>
+          <li><a href="http://localhost:3000/contact">Contact</a></li>
+          <li><a href="http://localhost:3000/account">Account</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="chatmessages">
+    <ul id="user"></ul>
+    <ul id="messages"></ul>
+    </div>
+    <form id="chat" action="">
+      <input id="m" autocomplete="off"><button>Send</button>
+    </form>
+     <script src="/socket.io/socket.io.js"></script>
+     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="/javascripts/main.js"></script>
+    <!-- <script src="javascripts/socket.js"></script> -->
+    <script>
+    var socket = io();
+    var messages = document.querySelector('#messages');
+    var form = document.querySelector('form');
+
+    form.addEventListener("submit", addMessage, false);
+
+     function addMessage(e) {
+      e.preventDefault();
+      socket.emit('chat message', document.querySelector('#m').value);
+      document.querySelector('#m').value = '';
+      //console.log("hello");
+      // socket.emit('adduser', )
+      
+    }
+    socket.on('connect', function(m) {
+      var list = document.createElement('li');
+      list.innerHTML += "You are successfully connected";
+      messages.appendChild(list);
+    });
+    socket.on('disconnect', function(m) {
+     var list = document.createElement('li');
+     list.innerHTML += (m);
+     messages.appendChild(list);
+   });
+    socket.on('chat message', function(m) {
+      var list = document.createElement('li');
+      list.innerHTML += (m);
+      messages.appendChild(list);
+    });
+    </script>
+  </body>
+</html>

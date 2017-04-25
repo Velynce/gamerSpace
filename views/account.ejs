@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= user.name['familyName'] %></title> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:700|Montserrat:200" rel="stylesheet">
+  </head>
+  <body>
+   <header id="titles">
+        <nav>
+          <ul>
+            <li class="navlist" id="brand"><a href="http://localhost:3000/home"><h3>Gamer Space</h3></a></li>
+            <li class="navlist list"><a id="user" href="http://localhost:3000/account"><img id="profileImage" src="<%= user.photos[0].value %>"> <%= user.name['familyName'] %></a></li>
+            <li class="navlist list"><a href="http://localhost:3000/home">Home</a></li>
+           <li class="navlist list"><a href="http://localhost:3000/contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <section id="profileCon">
+        <h2 id="profile">Profile</h2>
+        <div id="profilewrap">
+          <h3 id="accountname"><%= user.name['familyName'] %></h3>
+          <img id="image" src="<%= user.photos[0].value %>">
+        </div>
+      </section>
+      <footer>
+     <h3 id="footerTitle">@Gamer Space</h3>
+    </footer> 
+  </body>
+</html>

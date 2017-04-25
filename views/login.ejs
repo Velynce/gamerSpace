@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title> 
+    <meta charset="UTF-8">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:700|Montserrat:200" rel="stylesheet">
+  </head>
+  <body>
+    <div id="loginForm">
+      <img id="logo" src="/images/logos.svg" alt="gamerSpace Logo">
+      <h2 class="title"><%= title %></h2>
+    <form id="login" action="login" method="POST">
+        <div id="loginCon">
+          <a class="login" href="/auth/google">Sign In with Google</a><br>
+          <a class="login" href="/auth/bnet">Sign In with Battlenet</a>
+        </div>
+      </form>
+    </div>
+  </body>
+    <script src="javascripts/main.js"></script>
+  </body>
+</html>

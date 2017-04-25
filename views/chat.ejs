@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gamer Space</title> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:700|Montserrat:200" rel="stylesheet">
+  </head>
+  <body>
+     <header id="titles">
+        <nav>
+          <ul>
+            <li class="navlist" id="brand"><a href="http://localhost:3000/home"><h4>Gamer Space</h4></a></li>
+            <li class="navlist list"><a href="http://localhost:3000/account">Account</a></li>
+            <li class="navlist list"><a href="http://localhost:3000/home">Home</a></li>
+            <li class="navlist list"><a href="http://localhost:3000/contact">Contact</a></li>  
+          </ul>
+        </nav>
+      </header>
+    <div id="chatmessages">
+    <ul id="users"></ul>
+    <ul id="messages"></ul>   
+    <form id="chat" action="">
+      <input id="m" autocomplete="off"><button>Send</button>
+    </form>
+    </div>
+     <script src="/socket.io/socket.io.js"></script>
+     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="/javascripts/main.js"></script>
+    <script src="/javascripts/socket.js">
+    </script>
+    <footer>
+     <h3 id="footerTitle">@Gamer Space</h3>
+    </footer> 
+  </body>
+</html>

@@ -1,0 +1,605 @@
+@charset "UTF-8";
+
+html {
+	max-width: 100%;
+	height: 100%;
+}
+
+img, embed, object, video
+{
+	max-width: 100%;
+}
+
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box; 
+}
+
+body {
+ font: 13px Helvetica, Arial;
+ background: #99e8bc;
+ padding-top: 0;
+ height: 90%;
+}
+
+h2 {
+	text-align: center;
+	font-size: 30px;
+	font-family: 'Merriweather Sans', Arial, sans-serif;
+}
+
+a {
+	margin-top: 30px;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+a, h2, label {
+	color: #444749;
+}
+
+a,h3, label {
+	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+}
+
+label {
+	font-weight: bold;
+	font-size: 16px;
+}
+
+li {
+	list-style-type: none;
+}
+
+header {
+	width: 50%;
+	margin: 0 auto;
+	border-radius: 15px;
+}
+
+footer {
+	text-align: center;
+	bottom: 0;
+	position: absolute;
+	width: 100%;
+	background: rgb(68, 71, 73);
+	padding: 10px;
+}
+
+li.cRooms {
+	margin-top: 15px;
+}
+
+form#chat { 
+	background: rgb(235, 235, 235); 
+	margin: 0; 
+	padding: 5px;
+	position: relative; 
+	width: 100%;
+	bottom: 0; 
+}
+
+form#chat input { 
+	border: 0; 
+	padding: 10px; 
+	width: 55%; 
+	margin-right: .5%; 
+}
+
+form#chat button { 
+	width: 40%; 
+	background: #ccc; 
+	border: none; 
+	margin: 0; 
+	padding: 10px; 
+	font: 13px Helvetica,Arial; 
+	cursor: pointer; 
+	color: #65666A; 
+	transition: background-color 300ms ease-out 0s; 
+	border-radius: 10px;
+}
+
+form#chat button:hover {
+	color: #FFF; 
+	background-color: #E31D1A;
+}
+
+textarea {
+	width: 60%;
+	margin: 12px;
+	height: 80%;
+}
+
+#messages { 
+	list-style-type: none; 
+	margin: 0; padding: 0; 
+	margin-top: 60px; 
+	height: 380px;
+	overflow: auto;
+}
+
+#messages li { 
+	padding: 5px 10px; 
+}
+
+#messages li:nth-child(odd) { 
+	background: #eee; 
+}
+
+#loginForm {
+	text-align: center;
+	margin: 0 auto;
+	padding: 80px;
+}
+
+#login {
+	margin-top: 20px; 
+}
+
+#loginCon {
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+	padding: 25px;
+	background-color: rgba(30,99,52, 0.4);
+	border-radius: 20px;
+}
+
+#chatformCon {
+	width: 50%;
+	margin: 0 auto;
+	padding: 50px;
+}
+
+#chatmessages {
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+#users {
+		margin-top: 20px; 
+}
+
+#brand {
+	text-align: center;
+	border: none; 
+}
+
+#rooms {
+	text-align: center;
+	width: 80%;
+	position: relative;
+	padding: 15px;
+	margin: 0 auto;  
+	padding-top: 0;
+}
+
+#cRooms {
+	width: 20%;
+	padding-top: 10px;
+}
+
+#createchat {
+	text-align: center;
+	margin-top: 30px;
+}
+
+#logo {
+	width: 100%;
+}
+
+#mainTitle {
+	width: 70%;
+	text-align: center;
+	border-bottom: 2px solid #444749;
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+#titleWrap {
+	width: 80%;
+	padding: 10px;
+	margin: auto;
+}
+
+#profileImage {
+	height: 25px;
+	width: 30px;
+}
+
+#email.input {
+	width: 60%;
+	color: #444749;
+}
+
+#contactForm {
+	margin-top: 100px;
+	text-align: center;
+}
+
+#profile {
+	margin-top: 50px;
+	margin-bottom: 10px;
+}
+
+#profileCon {
+	text-align: center;
+	width: 50%;
+	margin: 0 auto; 
+}
+
+#profileCon h3 {
+	font-size: 18px;
+}
+
+#image {
+	margin-top: 15px;
+	width: 10%;
+	height: auto;
+}
+
+#mainCon {
+	width: 78%;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+#footerTitle {
+	color: #99e8bc;
+}
+
+.input {
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #444749;
+	font-size: 15px;
+	width: 70%;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	box-sizing: border-box;
+}
+
+.input:focus {
+	outline: none;
+}
+
+.login {
+	font-size: 12px;
+	margin-bottom: 5px;
+}
+
+.navlist {
+	text-align: left;
+	margin: 10px;
+	list-style-type: none;
+}
+
+.navlist:hover {
+	border-bottom: 2px solid white;
+}
+
+.list {
+	width: 30%;
+	margin: 0 auto;
+	margin-bottom: 5px;
+}
+
+@media screen and (min-width: 75em) and (max-width: 160em) {
+	header {
+		height: 80px;
+	}
+
+	nav {
+		margin: 15px; 
+	}
+
+	#logo {
+		width: 30%;
+	}
+
+	#mainTitle {
+		font: 20px;
+	}
+
+	#titleWrap {
+		width: 30%;
+		float: left;
+	}
+
+	#rooms {
+		width: 40%;
+		float: right;
+	}
+
+	#mainTitle {
+		font-size: 30px;
+	}
+
+	#createchat {
+		clear: both;
+		margin: 0;
+		padding: 30px;
+	}
+
+	#brand {
+		width: 30%;
+		float: left;
+	}
+
+	.navlist {
+		float: right;
+		padding-right: 10px;
+	}
+
+	#loginCon {
+		width: 30%;
+		font-size: 25px;
+	}
+
+	.login {
+		font-size: 18px;
+	}
+
+	#titles {
+		width: 100%;
+	}
+
+	.list {
+		width: 7%;
+	}
+
+	#mainCon {
+		margin-top: 50px;
+	}
+
+	#createchat {
+		margin-top: 
+	}
+
+	form#chat {
+		width: 70%;
+	}
+
+	#messages {
+		width: 70%;
+	}
+
+	#chatmessages {
+		padding: 10px;
+		width: 70%;
+		margin: 0 auto;
+	}
+
+	#email.input {
+		width: 20%;
+	}
+
+	textarea {
+		width: 20%;
+	}
+
+	#contactForm {
+		margin-top: 60px;
+	}
+
+	#profileCon {
+		text-align: left;
+	}
+
+	#accountname {
+		width: 10%;
+		text-align: left;
+		margin-left: 80px;
+	}
+
+	#profilewrap {
+		width: 50%;
+		padding: 10px;
+		margin: 0 auto;
+	}
+
+	#profile {
+		margin-bottom: 30px;
+	}
+
+}
+
+@media screen and (min-width: 48em) and (max-width: 75em) {
+	header {
+		height: 80px;
+	}
+
+	nav {
+		margin: 15px; 
+	}
+
+	#logo {
+		width: 50%;
+	}
+
+	#mainTitle {
+		font: 20px;
+	}
+
+	#titleWrap {
+		font-size: 20px;
+		width: 20%;
+		float: left;
+	}
+
+	#rooms {
+		width: 40%;
+		float: right;
+	}
+
+	#mainTitle {
+		width: 100%;
+	}
+
+	#createchat {
+		clear: both;
+		margin: 0;
+		padding: 30px;
+	}
+
+	#brand {
+		width: 30%;
+		float: left;
+	}
+
+	.navlist {
+		width: 15%;
+		float: right;
+	}
+
+	#loginCon {
+		width: 40%;
+		font-size: 25px;
+	}
+
+	.login {
+		font-size: 18px;
+	}
+
+	#titles {
+		width: 100%;
+	}
+
+	.list { 
+		width: 10%;
+	}
+
+	#mainCon {
+		margin-top: 50px;
+	}
+
+	#createchat {
+		margin-top: 
+	}
+}
+
+@media screen and (min-width: 20em) and (max-width: 48em) {
+	header {
+		height: 70px;
+	}
+
+	nav {
+		margin-top: 30px;
+	}
+	#mainTitle {
+		width: 50%;
+	}
+
+	#titleWrap {
+		width: 60%;
+		margin: 0;
+		float: left;
+	}
+
+	#rooms {
+		width: 40%;
+		margin: 0;
+		float: right;
+	}
+
+	#mainCon {
+		margin-top: 40px;
+	}
+
+	#createchat {
+		padding-top: 50px;
+		clear: both;
+	}
+
+	#brand {
+		font-size: 12px;
+		float: left;
+	}
+
+	#titles {
+		width: 100%;
+	}
+
+	.list {
+		width: 30%;
+	}
+
+	.navlist {
+		float: right;
+		margin: 0;
+		width: 20%;
+	}
+
+	#loginCon {
+		width: 50%;
+		font-size: 20px;
+	}
+
+	#title {
+		font-size: 20px;
+	}
+
+	#logo {
+		width: 60%;
+	}
+
+	#list {
+		width: 20%;
+	}
+
+	#chatmessages {
+		width: 100%;
+	}
+
+	#messages {
+		height: 300px;
+	}
+
+}
+
+@media screen and (max-width: 20em) {
+	#brand {
+		clear: both;
+	}
+
+	#titles {
+		width: 100%;
+		text-align: center;
+	}
+
+	#titles nav ul {
+		width: 50%;
+		margin: 0 auto;
+	}
+
+	#rooms {
+		width: 100%;
+		margin: 0;
+		clear: both;
+	}
+
+	.navlist {
+		width: 100%;
+		clear:both;
+		font-size: 12px;
+	}
+
+	.list {
+		margin-top: 5px;
+		padding-left: 30px; 
+	}
+
+	#titleWrap, #mainTitle {
+		margin-top: 10px;
+		width: 100%;
+	}
+
+	#profileCon {
+		padding-top: 20px;
+	}
+
+	#chatmessages {
+		width: 100%;
+	}
+}
